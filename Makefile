@@ -21,26 +21,26 @@ dependencies: ## Install prd dependencies
 	@poetry install --without dev
 
 dev-dependencies: ## Install prd dependencies
-	@poetry install 
+	@poetry install
 
 
 ###
 # Lint section
 ###
 _flake8:
-	@flake8 --show-source .
+	@flake8 --show-source src/
 
 _isort:
 	@isort --diff --check-only src/
 
 _black:
-	@black --check src/
+	@black --check src/ -l 79
 
 _isort-fix:
 	@isort .
 
 _black_fix:
-	@black .
+	@black . -l 79
 
 _dead_fixtures:
 	@pytest --dead-fixtures tests/
