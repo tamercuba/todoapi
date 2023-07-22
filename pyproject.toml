@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "todo-api"
+version = "0.1.0"
+description = "A task manager api"
+authors = ["Tamer Cuba <tamercuba@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "todo_api"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.4.1"
+pytest = "^7.4.0"
+black = "^23.7.0"
+isort = "^5.12.0"
+flake8 = "^6.0.0"
+pylint = "^2.17.4"
+pytest-deadfixtures = "^2.2.1"
+pytest-xdist = "^3.3.1"
+pytest-asyncio = "^0.21.1"
+pytest-cov = "^4.1.0"
+ipython = "^8.14.0"
+ipdb = "^0.13.13"
+diff-cover = "^7.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
