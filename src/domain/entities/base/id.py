@@ -10,12 +10,10 @@ from pydantic_core.core_schema import ValidationInfo
 
 class EntityID(str):
     @classmethod
-    def __get_pydantic_json_schema__(
-        cls, *agrs, **kwargs  # pylint: disable=W0613
-    ) -> JsonSchemaValue:
-        json_schema: dict[str, Any] = {}
-        json_schema.update(type="string")
-        return json_schema
+    def __get_pydantic_json_schema__(cls, *agrs, **kwargs) -> JsonSchemaValue:
+        json_schema: dict[str, Any] = {}  # pragma: no cover
+        json_schema.update(type="string")  # pragma: no cover
+        return json_schema  # pragma: no cover
 
     @classmethod
     def __get_pydantic_core_schema__(cls, *args, **kwargs) -> CoreSchema:
